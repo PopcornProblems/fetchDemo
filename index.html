@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Fetch</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+    <div class="dogKennel"> <!-- Change "id" to "class" -->
+        <aside class="leftMenu">
+            <h2>Breeds</h2>
+            <form id="breedForm">
+                <fieldset>
+                    <legend></legend>
+                    <div class="checkbox-container" id="breedsContainer">
+                        <!-- Use checkboxes for breed selection -->
+                        <!-- Example: <input type="checkbox" id="breed1" name="breeds[]" value="breed1"> -->
+                    </div>
+                </fieldset>
+                <button type="submit">Fetch dogs</button>
+            </form>
+        </aside>
+        <main class="content">
+            <div class="photo-container">
+                <!-- Dog photos will be displayed here -->
+            </div>
+        </main>
+    </div>
+    <script src="javascript/dogFetch.js"></script>
+</body>
