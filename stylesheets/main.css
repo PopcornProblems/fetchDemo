@@ -1,68 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the main container */
 .dogKennel {
     display: flex;
     justify-content: space-between;
 }
+
+/* Style the header */
+header {
+    background-color: rgb(52, 1, 52);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the H1 */
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Style the description paragraph */
+header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
 /* Style the aside for dog selection */
 .leftMenu {
-    width: 30%;
+    width: calc(20% - 20px);
     padding: 20px;
-    background-color:rgb(52, 1, 52); /* Dark purple background color */
-    color: white; /* White text color */
-    font-size: 0.9rem; /* Smaller font size */
-    overflow-y: auto; /* Allow the aside to scroll separately */
+    background-color: rgb(52, 1, 52);
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    overflow-y: auto;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
 h2 {
     text-align: center;
     margin: -3.5px;
-    font-size: 4.5em;
+    font-size: 2.5rem;
 }
+
 /* Style the checkboxes */
 .checkbox-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border: none;
 }
+
 .checkbox-container label {
     display: flex;
-    align-items: center; /* Vertically align the checkbox with its label */
+    align-items: center;
+    cursor: pointer; /* Add pointer cursor for checkboxes */
 }
+
 .checkbox-container input[type="checkbox"] {
     margin-right: 5px;
+    transform: scale(1.2); /* Increase the size of the checkboxes */
 }
+
+.checkbox-container input[type="checkbox"]:hover {
+    transform: scale(1.3); /* Increase size slightly on hover */
+}
+
+/* Style the fetch button */
 button {
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the main content area */
 .content {
     width: 65%;
     padding: 20px;
     background-color: #fff;
-}
-/* Parent container for the page */
-.dogKennel {
-    display: flex;
-}
-
-/* Left menu styling */
-.left-menu {
-    flex: 0 0 250px; /* Fixed width for the left menu */
-    background-color: #f0f0f0;
-    padding: 20px;
-    position: sticky; /* Makes the left menu sticky */
-    top: 0; /* Stick to the top of the viewport */
-    height: 100vh; /* 100% viewport height */
-    overflow-y: auto; /* Allow the left menu to scroll if it overflows */
-}
-
-/* Main content styling */
-.content {
-    flex-grow: 1; /* Expand to fill remaining space */
-    padding: 20px;
-}
-#breeds {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 /* Style the photo container */
@@ -76,26 +108,10 @@ button {
     max-width: 100%;
     height: auto;
     margin: 10px;
-    width: 200px;
-    height: 200px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .photo-container img:hover {
-    transform: scale(1.05); /* Increase size slightly */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-    border: 2px solid #333; /* Add a border */
-}
-@media screen and (max-width: 768px) {
-    .dogKennel {
-        flex-direction: column; /* Stack elements vertically on small screens */
-    }
-
-    .left-menu {
-        width: 100%; /* Expand to full width on small screens */
-    }
-
-    .content {
-        width: 100%; /* Expand to full width on small screens */
-    }
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
